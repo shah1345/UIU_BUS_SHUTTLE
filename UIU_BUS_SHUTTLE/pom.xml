@@ -52,6 +52,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>13</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -75,7 +80,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.shah.uiubus.uiu_bus_shuttle/com.shah.uiubus.uiu_bus_shuttle.HelloApplication
+                                com.shah.uiubus.uiu_bus_shuttle/com.shah.uiubus.uiu_bus_shuttle.MainActivity
                             </mainClass>
                         </configuration>
                     </execution>
