@@ -3,11 +3,16 @@ package com.example.map;
 
         import java.net.URL;
         import java.util.ResourceBundle;
+
+        import javafx.collections.FXCollections;
+        import javafx.collections.ObservableList;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
         import javafx.fxml.Initializable;
         import javafx.scene.control.Button;
-        import javafx.scene.paint.Color;
+        import javafx.scene.control.ChoiceBox;
+        import javafx.scene.control.ComboBox;
+        import javafx.scene.image.ImageView;
         import javafx.scene.web.WebEngine;
         import javafx.scene.web.WebView;
 
@@ -119,6 +124,14 @@ public class MainPcontroler implements Initializable {
 
 
 
+    @FXML
+    private ImageView img;
+    //img.setStyle("-fx-background-image:url('99.jpg')");
+
+
+
+    @FXML
+    private ComboBox location;
 
 
     @FXML // fx:id="buslocationweb"
@@ -128,9 +141,28 @@ public class MainPcontroler implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+
+
          engine = webviewbus.getEngine();
         engine.load("https://www.google.com/maps/place/23%C2%B047'50.2%22N+90%C2%B027'00.6%22E/@23.7972742,90.4496248,19z/data=!3m1!4b1!4m6!3m5!1s0x0:0x93d97e78b3df502!7e2!8m2!3d23.797273!4d90.4501719?hl=en");
+
+        ObservableList<String> cityCorp = FXCollections.observableArrayList("UIU Campus", "Natun Bazar", "Sayd Nogor");
+
+        location.setItems(cityCorp);
+
+
+
+
+
+
     }
+
+
+
+
+
+
+
 
     public void A0(ActionEvent actionEvent) {
 
@@ -313,5 +345,8 @@ public class MainPcontroler implements Initializable {
         if(e0.getStyle().equals("-fx-background-color: #ff0000; ")){
             e0.setStyle("-fx-background-color: #ffe6e6; ");
         } else  e0.setStyle("-fx-background-color: #ff0000; ");
+    }
+
+    public void Locklist(ActionEvent actionEvent) {
     }
 }
