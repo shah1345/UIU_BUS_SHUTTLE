@@ -157,7 +157,26 @@ public class MainPcontroler implements Initializable {
 
     }
 
+@FXML
+void Locklist(ActionEvent event) {
 
+    if(location.getValue().equals("UIU Campus")) {
+        engine.load("https://www.google.com/maps/place/23%C2%B047'50.2%22N+90%C2%B027'00.6%22E/@23.7972742,90.4496248,19z/data=!3m1!4b1!4m6!3m5!1s0x0:0x93d97e78b3df502!7e2!8m2!3d23.797273!4d90.4501719?hl=en");
+
+    } else if(location.getValue().equals("Natun Bazar")){
+
+
+        engine.load("https://www.google.com.bd/maps/place/23%C2%B047'52.1%22N+90%C2%B025'27.0%22E/@23.7978002,90.4236178,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3755c7ba919c9e8f:0x74c8c1dc2d04bd18!2z4Kao4Kak4KeB4KaoIOCmrOCmvuCmnOCmvuCmsCDgpqvgp4Hgpp_gppPgpq3gpr7gprAg4Kas4KeN4Kaw4Ka_4KacLCDgpqLgpr7gppXgpr4gMTIxMg!3b1!8m2!3d23.7973082!4d90.4235963!3m5!1s0x0:0x7639390b5219eed0!7e2!8m2!3d23.7977988!4d90.4241647");
+
+    } else if(location.getValue().equals("Sayd Nogor")){
+
+        engine.load("https://www.google.com.bd/maps/place/23%C2%B047'55.2%22N+90%C2%B026'05.9%22E/@23.798774,90.4354431,19z/data=!4m15!1m8!3m7!1s0x0:0x7639390b5219eed0!2zMjPCsDQ3JzUyLjEiTiA5MMKwMjUnMjcuMCJF!3b1!7e2!8m2!3d23.7977988!4d90.4241647!3m5!1s0x0:0x6204ebc13a8386b9!7e2!8m2!3d23.7986552!4d90.4349713");
+
+
+    }
+
+
+}
 
 
 
@@ -347,6 +366,5 @@ public class MainPcontroler implements Initializable {
         } else  e0.setStyle("-fx-background-color: #ff0000; ");
     }
 
-    public void Locklist(ActionEvent actionEvent) {
-    }
+
 }
