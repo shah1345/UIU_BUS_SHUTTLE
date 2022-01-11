@@ -12,7 +12,9 @@ package com.example.map;
         import javafx.scene.control.Button;
         import javafx.scene.control.ChoiceBox;
         import javafx.scene.control.ComboBox;
+        import javafx.scene.control.ListView;
         import javafx.scene.image.ImageView;
+        import javafx.scene.text.Text;
         import javafx.scene.web.WebEngine;
         import javafx.scene.web.WebView;
 
@@ -122,6 +124,19 @@ public class MainPcontroler implements Initializable {
     private Button e0;
 
 
+    @FXML
+    private ListView listview;
+
+
+
+
+    @FXML
+    private Text studentshow;
+
+    @FXML
+    private Button Confirmedbtn;
+
+
 
 
     @FXML
@@ -147,9 +162,14 @@ public class MainPcontroler implements Initializable {
         engine.load("https://www.google.com/maps/place/23%C2%B047'50.2%22N+90%C2%B027'00.6%22E/@23.7972742,90.4496248,19z/data=!3m1!4b1!4m6!3m5!1s0x0:0x93d97e78b3df502!7e2!8m2!3d23.797273!4d90.4501719?hl=en");
 
         ObservableList<String> cityCorp = FXCollections.observableArrayList("UIU Campus", "Natun Bazar", "Sayd Nogor");
+        ObservableList<String> Booked_list = FXCollections.observableArrayList("Shah Newaz", "Anika Tabassum", "Ayon","MIM","Shah Newaz", "Anika Tabassum", "Ayon","MIM","Shah Newaz", "Anika Tabassum", "Ayon","MIM","Shah Newaz", "Anika Tabassum", "Ayon","MIM","Shah Newaz", "Anika Tabassum", "Ayon","MIM","Shah Newaz", "Anika Tabassum", "Ayon","MIM");
 
         location.setItems(cityCorp);
+        listview.setItems(Booked_list);
 
+        studentshow.setText("Anika Tabassum  011201346");
+
+        //System.out.println(studentshow.getText());
 
 
 
@@ -364,6 +384,11 @@ void Locklist(ActionEvent event) {
         if(e0.getStyle().equals("-fx-background-color: #ff0000; ")){
             e0.setStyle("-fx-background-color: #ffe6e6; ");
         } else  e0.setStyle("-fx-background-color: #ff0000; ");
+    }
+    public void Conbtn(ActionEvent actionEvent) {
+        if(Confirmedbtn.getStyle().equals("-fx-background-color: #ff0000; ")){
+            Confirmedbtn.setStyle("-fx-background-color: #ffe6e6; ");
+        } else  Confirmedbtn.setStyle("-fx-background-color: #ff0000; ");
     }
 
 
